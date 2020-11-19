@@ -2,23 +2,13 @@ const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const PORT = process.env.PORT || 5000;
 const producerList = require('./data/producer');
+const users = require('./data/users');
 const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
-
-let users = [
-  {
-    id: 0,
-    username: 'test',
-    email: 'test@test.com',
-    password: '12345',
-    city: 'Chicago',
-    isProducer: false,
-  },
-];
 
 const secretCode = 'secret';
 
@@ -75,23 +65,27 @@ app.post('/signup', (req, res) => {
 
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
+  console.log(username, password);
 
-  let checkLogin = users.map((user) => {
-    return user.username === username && user.password === password && user;
-  });
+  let checkLogin = users.filter(
+    (user) => user.username === username && user.password === password
+  );
 
   console.log(checkLogin);
   if (checkLogin.length > 0) {
-    console.log('ok');
     let userData = {
       username: checkLogin[0].username,
       email: checkLogin[0].email,
       email: checkLogin[0].email,
       city: checkLogin[0].city,
+      isProducer: checkLogin[0].isProducer,
+      orders: checkLogin[0].orders,
+      litiges: checkLogin[0].litiges,
+      feedbacks: checkLogin[0].feedbacks,
     };
+
     res.json(userData);
   } else {
-    console.log('nope');
     res.sendStatus(403);
   }
 });
