@@ -1,4 +1,4 @@
-const productorsList = [
+const producerList = [
   {
     id: 0,
     name: 'Rob',
@@ -78,4 +78,4 @@ const productorsList = [
   },
 ];
 
-module.exports = productorsList;
+module.exports = producerList;

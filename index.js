@@ -1,7 +1,7 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const PORT = process.env.PORT || 5000;
-const productorsList = require('./data/productors');
+const producerList = require('./data/producer');
 
 const app = express();
 
@@ -14,7 +14,7 @@ let users = [
     email: 'test@test.com',
     password: '12345',
     city: 'Chicago',
-    isProductor: false,
+    isProducer: false,
   },
 ];
 
@@ -28,7 +28,7 @@ app.post('/signup', (req, res) => {
     confirmPassword,
     checkSecretCode,
     city,
-    isProductor,
+    isProducer,
   } = req.body;
 
   let checkUsers = users.filter(
@@ -60,7 +60,7 @@ app.post('/signup', (req, res) => {
       message: 'Please provide a city',
     });
   } else {
-    users.push({ id: uuidv4(), username, email, password, city, isProductor });
+    users.push({ id: uuidv4(), username, email, password, city, isProducer });
     console.log(users);
 
     res.json({
@@ -71,17 +71,28 @@ app.post('/signup', (req, res) => {
   }
 });
 
-app.get('/productorsList', (req, res) => {
-  res.status(200).json(productorsList);
+app.get('/producerList', (req, res) => {
+  res.status(200).json(producerList);
 });
 
 app.get('/search', (req, res) => {
   const { alcohol } = req.query;
-  let filteredSearch = productorsList.filter(
+  let filteredAlcohol = producerList.filter(
     (e) => e.alcohol.toLowerCase() === alcohol.toLowerCase()
   );
-  if (filteredSearch.length > 0) {
-    res.status(200).send(filteredSearch);
+  if (filteredAlcohol.length > 0) {
+    res.status(200).send(filteredAlcohol);
+  } else {
+    res.send(404);
+  }
+});
+app.get('/search', (req, res) => {
+  const { location } = req.query;
+  let filteredLocation = producerList.filter(
+    (e) => e.location.toLowerCase() === location.toLowerCase()
+  );
+  if (filteredLocation.length > 0) {
+    res.status(200).send(filteredLocation);
   } else {
     res.send(404);
   }
