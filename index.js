@@ -85,7 +85,7 @@ app.get('/search', (req, res) => {
   if (filteredAlcohol.length > 0) {
     res.status(200).send(filteredAlcohol);
   } else {
-    res.send(404);
+    res.status(404).send('No result');
   }
 });
 app.get('/search', (req, res) => {
@@ -96,7 +96,7 @@ app.get('/search', (req, res) => {
   if (filteredLocation.length > 0) {
     res.status(200).send(filteredLocation);
   } else {
-    res.send(404);
+    res.send(404).send('No result');
   }
 });
 
