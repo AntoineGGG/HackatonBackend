@@ -73,6 +73,23 @@ app.post('/signup', (req, res) => {
   }
 });
 
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  let checkLogin = users.filter(
+    (user) => user.username === username && user.password === password
+  );
+
+  console.log(checkLogin);
+  if (checkLogin.length > 0) {
+    console.log('ok');
+    res.send('user authentified');
+  } else {
+    console.log('nope');
+    res.sendStatus(403);
+  }
+});
+
 app.get('/producerList', (req, res) => {
   res.status(200).json(producerList);
 });
