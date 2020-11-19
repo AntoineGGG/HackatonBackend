@@ -2,10 +2,12 @@ const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const PORT = process.env.PORT || 5000;
 const producerList = require('./data/producer');
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 let users = [
   {
