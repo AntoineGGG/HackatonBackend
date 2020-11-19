@@ -76,14 +76,20 @@ app.post('/signup', (req, res) => {
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  let checkLogin = users.filter(
-    (user) => user.username === username && user.password === password
-  );
+  let checkLogin = users.map((user) => {
+    return user.username === username && user.password === password && user;
+  });
 
   console.log(checkLogin);
   if (checkLogin.length > 0) {
     console.log('ok');
-    res.send('user authentified');
+    let userData = {
+      username: checkLogin[0].username,
+      email: checkLogin[0].email,
+      email: checkLogin[0].email,
+      city: checkLogin[0].city,
+    };
+    res.json(userData);
   } else {
     console.log('nope');
     res.sendStatus(403);
