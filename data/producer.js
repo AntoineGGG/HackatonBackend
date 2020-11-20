@@ -1,10 +1,14 @@
-const producerList = [
+let producerList = [
   {
     id: 0,
     name: 'Rob',
     city: 'Denver',
     alcohol: 'Vodka',
     ratings: 10,
+    stock: 50,
+    price: 3,
+    image: 'https://i.ibb.co/wCLGdrW/Vodka.png',
+    meetMessage: 'See you in the backcountry on the north of denver',
   },
   {
     id: 1,
@@ -12,6 +16,10 @@ const producerList = [
     city: 'Los Angeles',
     alcohol: 'Whiskey',
     ratings: 5,
+    stock: 20,
+    price: 5,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: "Let's meet at 21st Yam street",
   },
   {
     id: 2,
@@ -19,13 +27,21 @@ const producerList = [
     city: 'Chicago',
     alcohol: 'Gin',
     ratings: 9,
+    stock: 10,
+    price: 10,
+    image: 'https://i.ibb.co/RPwG7Y9/Gin.png',
+    meetMessage: "At your mother's house, but knock...",
   },
   {
     id: 3,
     name: 'Brew fidelity',
     city: 'Portland',
-    alcohol: 'Base',
+    alcohol: 'Tequila',
     ratings: 6,
+    stock: 100,
+    price: 4,
+    image: 'https://i.ibb.co/ZckMs7t/pngegg-2.png',
+    meetMessage: "I'll send you a mail, catch u later",
   },
   {
     id: 4,
@@ -33,6 +49,27 @@ const producerList = [
     city: 'Houston',
     alcohol: 'Whiskey',
     ratings: 2,
+    stock: 7,
+    price: 7,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: 'meet me in the hoods in',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: 'I never saw this fucking guys',
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message: 'This crazy guy tried to bite me....run away',
+      },
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: "Hello Houston, it's moon down there....",
+      },
+    ],
   },
   {
     id: 5,
@@ -40,6 +77,10 @@ const producerList = [
     localisation: 'Saint Louis',
     alcohol: 'Whiskey',
     ratings: 8,
+    stock: 15,
+    price: 3,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: "Near the stadium, I'll wear a kangaroo panties",
   },
   {
     id: 6,
@@ -47,6 +88,10 @@ const producerList = [
     city: 'Sioux Falls',
     alcohol: 'Whiskey',
     ratings: 3,
+    stock: 25,
+    price: 3,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: 'Same place Bro !',
   },
   {
     id: 7,
@@ -54,6 +99,10 @@ const producerList = [
     city: 'Salt Lake City',
     alcohol: 'Whiskey',
     ratings: 4,
+    stock: 10,
+    price: 8,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: 'On the slopes maaan !',
   },
   {
     id: 8,
@@ -61,6 +110,10 @@ const producerList = [
     city: 'Kansas City',
     alcohol: 'Whiskey',
     ratings: 7,
+    stock: 150,
+    price: 6,
+    image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
+    meetMessage: 'Search for the Gang Farm',
   },
   {
     id: 9,
@@ -68,6 +121,10 @@ const producerList = [
     city: 'Miami',
     alcohol: 'Rhum',
     ratings: 8,
+    stock: 45,
+    price: 10,
+    image: 'https://i.ibb.co/dbVm6r9/rhum.png',
+    meetMessage: 'Meet me at the fourth ocean rescue liveguard towers',
   },
   {
     id: 10,
@@ -75,6 +132,10 @@ const producerList = [
     city: 'Ashburn',
     alcohol: 'Calvados',
     ratings: 1,
+    stock: 1,
+    price: 200,
+    image: 'https://i.ibb.co/kJT8D45/Calvados.png',
+    meetMessage: 'If you want this awesome booze, you have to deserve it',
   },
 ];
 

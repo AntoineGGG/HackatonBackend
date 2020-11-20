@@ -1,9 +1,10 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const PORT = process.env.PORT || 5000;
-const producerList = require('./data/producer');
+let producerList = require('./data/producer');
 const users = require('./data/users');
 const cors = require('cors');
+const e = require('express');
 
 const app = express();
 
@@ -88,6 +89,17 @@ app.post('/login', (req, res) => {
   } else {
     res.sendStatus(403);
   }
+});
+
+// Trying to modify the quantity from a post request...but it's so fucking late....
+app.post('/producer', (req, res) => {
+  const { id, stock } = req.query;
+  let alcoholToModify = producerList.filter(
+    (product) => product.id === parseInt(id)
+  );
+  alcoholToModify[0].stock = parseInt(stock);
+  console.log(producerList);
+  res.sendStatus(200);
 });
 
 app.get('/producerList', (req, res) => {
