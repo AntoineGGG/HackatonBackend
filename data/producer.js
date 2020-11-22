@@ -9,6 +9,23 @@ let producerList = [
     price: 3,
     image: 'https://i.ibb.co/wCLGdrW/Vodka.png',
     meetMessage: 'See you in the backcountry on the north of denver',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Bought real russian vodka in the US...awesome',
+      },
+      {
+        username: 'Anonymous',
+        rating: 7,
+        message: 'Thanks dude !!!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 7,
+        message: 'You rocks !',
+      },
+    ],
   },
   {
     id: 1,
@@ -20,6 +37,23 @@ let producerList = [
     price: 5,
     image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
     meetMessage: "Let's meet at 21st Yam street",
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 8,
+        message: 'Home made Whiskey, like we love !',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Is prohibition time ? absolutly no!!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 8,
+        message: 'Funny guy with good products !',
+      },
+    ],
   },
   {
     id: 2,
@@ -31,6 +65,23 @@ let producerList = [
     price: 10,
     image: 'https://i.ibb.co/RPwG7Y9/Gin.png',
     meetMessage: "At your mother's house, but knock...",
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'This guys freak me out....but god damn good Gin',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'What a crazy gansta !!!!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Impressive !!',
+      },
+    ],
   },
   {
     id: 3,
@@ -42,6 +93,24 @@ let producerList = [
     price: 4,
     image: 'https://i.ibb.co/ZckMs7t/pngegg-2.png',
     meetMessage: "I'll send you a mail, catch u later",
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Ariiiibaaaaaaaaa !!!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message:
+          "There to bought some alcohol, came back with coke, we didn't understand....and didn't remember....btw",
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Spring Break Fever !!',
+      },
+    ],
   },
   {
     id: 4,
@@ -57,7 +126,7 @@ let producerList = [
       {
         username: 'Anonymous',
         rating: 2,
-        message: 'I never saw this fucking guys',
+        message: 'I never saw this fucking guy',
       },
       {
         username: 'Anonymous',
@@ -81,6 +150,23 @@ let producerList = [
     price: 3,
     image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
     meetMessage: "Near the stadium, I'll wear a kangaroo panties",
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Thats Amaizing !!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Very Good, Very good !',
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message: 'Very bad, very bad',
+      },
+    ],
   },
   {
     id: 6,
@@ -92,6 +178,23 @@ let producerList = [
     price: 3,
     image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
     meetMessage: 'Same place Bro !',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 8,
+        message: 'God damn strong brew !',
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: "That's too strong man, your crazy to made this shit !",
+      },
+      {
+        username: 'Anonymous',
+        rating: 10,
+        message: 'Impressive !!',
+      },
+    ],
   },
   {
     id: 7,
@@ -103,6 +206,23 @@ let producerList = [
     price: 8,
     image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
     meetMessage: 'On the slopes maaan !',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: 'Awesome after ski in salt lake..thanks bro!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message: "We'll meet again..",
+      },
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: 'Whats a crap ? ',
+      },
+    ],
   },
   {
     id: 8,
@@ -114,10 +234,27 @@ let producerList = [
     price: 6,
     image: 'https://i.ibb.co/LZhG5fw/Whiskey.png',
     meetMessage: 'Search for the Gang Farm',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: 'This old man know the rules....',
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message: 'Awesome alcohol from awesome man !',
+      },
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: 'Pro, what else ? ',
+      },
+    ],
   },
   {
     id: 9,
-    name: 'KaneWest',
+    name: 'KanyeWest',
     city: 'Miami',
     alcohol: 'Rhum',
     ratings: 8,
@@ -125,6 +262,24 @@ let producerList = [
     price: 10,
     image: 'https://i.ibb.co/dbVm6r9/rhum.png',
     meetMessage: 'Meet me at the fourth ocean rescue liveguard towers',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: "It's tasty and it works !!",
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message:
+          "I can't remember the day whe I bought this awesome product...",
+      },
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message: "Hello Houston, it's moon down there....",
+      },
+    ],
   },
   {
     id: 10,
@@ -136,6 +291,24 @@ let producerList = [
     price: 200,
     image: 'https://i.ibb.co/kJT8D45/Calvados.png',
     meetMessage: 'If you want this awesome booze, you have to deserve it',
+    feedbacks: [
+      {
+        username: 'Anonymous',
+        rating: 1,
+        message: 'Thos calavdos is a shit !!!',
+      },
+      {
+        username: 'Anonymous',
+        rating: 0,
+        message: "This guy just stole my money, don't waist your time guys...",
+      },
+      {
+        username: 'Anonymous',
+        rating: 2,
+        message:
+          'He was the nearest reseller, but this alcohol is disgusting....what a shame !!!',
+      },
+    ],
   },
 ];
 
