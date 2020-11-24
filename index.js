@@ -13,6 +13,10 @@ app.use(cors());
 
 const secretCode = 'secret';
 
+app.get('/test', (req, res) => {
+  res.sendStatus(200);
+});
+
 app.post('/signup', (req, res) => {
   const {
     username,
